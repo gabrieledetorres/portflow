@@ -7,9 +7,11 @@
     list-style:none;
     font-family: 'Montserrat', sans-serif;
 }
+
 header{
     display: flex;
 }
+
 .containerSandwichMenu{
     display:none;
     width:35vw;
@@ -21,6 +23,7 @@ header{
 .containerSandwichMenu img{
     width:9vw;
     height:6vh;
+    display: none;
 }
 
 .boxHeader{
@@ -28,22 +31,22 @@ header{
     height:122px;
     display:flex;
     position:fixed;
+    align-items: center;
     background-color: white;
     justify-content: space-between;
     z-index: 999;
 }
 
 .boxHeader h2{
-    margin-top:30px;
     margin-left:140px;
     font-size:40px;
+    width: 25%;
 }
 
 .boxHeader nav{
-    width:40%;
-    margin-top:50px;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-right:140px;
+    width: 45%;
 }
 
 .boxHeader ul{
@@ -52,8 +55,6 @@ header{
 }
 
 .boxHeader li{
-    display:flex;
-    justify-content: space-between; 
     font-size:1.5rem;
 }
 
@@ -89,7 +90,7 @@ main{
     height: 40%;
 }
 .divTitle form{
-    width: 800px;
+    width: 300px;
     height: 10%;
 }
 
@@ -110,7 +111,6 @@ button{
     background-position: center;
     width:100%;
     height:200%; 
-    display:flex;
     position:absolute;
     top:150px;
 }
@@ -147,6 +147,7 @@ footer{
     position: relative;
     top: 80em;
     width:100%;
+    background-color: whitesmoke;
     height:126px;
 }
 
@@ -157,22 +158,28 @@ footer{
     width:25%;
     height:10em;
 }
+.social img{
+    width: 30px;
+    height: 30px;
+}
 
 .copyrightBox{
     display:flex;
     align-content: center;
     width:60%;
     justify-content: space-around;
+    margin-left: 4em;
 }
-
 .copyrightBox h4{
-    font-size:1.3rem;
-    margin-left:10vh;
+    font-size:1.1rem;
+    margin-right: 1em;
+}
+.copyrightBox p{
+    font-size:0.9rem;
 }
 
 .paragraphBox{
     display:flex;
-    flex-direction:column;
 }
 
 .anchorButton{
@@ -181,6 +188,21 @@ footer{
     background-color: #333333;
 }
 
+@media (max-width:1144px){
+    .sectionGrid{
+        top:50em;
+    }
+}
+
+@media (max-width:1100px){
+    .boxHeader h2 {
+        margin-left: 50px;
+    }
+
+    .navigation li{
+        font-size: 1.15rem;
+    }
+}
 
 @media(max-width:770px){
     
@@ -188,17 +210,32 @@ footer{
         height:2em;
     }
 
-    .boxHeader{
-        width:100%;
-        height:2em;
-        font-size:18px;
+    .boxHeader {
+        width: 100%;
+        height: 3em;
+        font-size: 18px;
+    }
+    .boxHeader h2{
+        position: relative;
+        left: 5em;
     }
 
     .containerSandwichMenu{
         display:flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-evenly;
         align-items: center;
         position:absolute;
+        width: 200px;
+        height: 53px;
+        background-color: black;
+        z-index: 1000;
+        cursor: pointer;
+    }
+    .bar{
+        background-color: white;
+        width: 45px;
+        height: 3px;
     }
     
     .navigation{
@@ -207,42 +244,119 @@ footer{
 
     .divTitle{
         top:460px;
+        font-size: 2.5rem;
     }
 
     .laranja{
-        width:100%;
         background-size:cover;
+        background-position: 90%;
+        top: 0;
     }
 
-    .sectionGrid{
-        width:50%;
-        top:900px;
+    .sectionGrid {
+        width: 100%;
+        top: 900px;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+    .sectionGrid img{
+        width: 300px;
+        height: 300px;
     }
 
     footer{
         display:flex;
+        height: 100%;
+        width: 100%;
         flex-direction: column;
-        top:2000px;
+        top:270em;
     }
 
-    .social{
-        width:100%;
-        height:60px;
-        background-color:#7FDBD4;
+    .social {
+        width: 90%;
+        height: 60px;
+        background-color: #7FDBD4;
         align-items: center;
-        margin-left:140px;
+        justify-content: space-around;
     }
 
     .copyrightBox{
         display:flex;
-        flex-direction: column;
+        justify-content: space-between;
+        width: 65%;
+        text-align: left;
     }
 
     .copyrightBox h4{
         margin:0;
     }
+
+    .paragraphBox {
+        flex-direction: column;
+        position: relative;
+        top: 2em;
+        right: 8em;
+        height: 100%;
+    }
+    
+    .anchorButton {
+        display: flex;
+        position: relative;
+        left: 3.5em;
+        width: 160px;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        height: 28px;
+    }
+}
+
+@media (max-width:630px){
+    
+    .divTitle{
+        left: 0;
+    }
+
+    .paragraphBox{
+        left: -4em;
+        width: 55%;
+    }
+    .paragraphBox h4{
+        font-size: 1rem;
+    }
+    .paragraphBox p{
+        font-size: 0.7rem;
+    }
     
     .anchorButton{
-        display:initial;
+        left: 1em;
+    }
+}
+
+@media (max-width:460px){
+    .containerSandwichMenu{
+        width: 180px;
+    }
+
+    .boxHeader h2 {
+        margin-left: 0;
+        left: 6em;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:410px){
+
+    .laranja{
+        background-position: 80%;
+    }
+
+    .divTitle h1{
+        font-size: 4rem;
+    }
+
+    button {
+        margin: 75px 0;
     }
 }
