@@ -7,7 +7,9 @@
     list-style:none;
     font-family: 'Montserrat', sans-serif;
 }
-
+header{
+    display: flex;
+}
 .containerSandwichMenu{
     display:none;
     width:111px;
@@ -57,16 +59,32 @@
     
 }
 
+main{
+    width:100%;
+    position: relative;
+    max-width: 1900px;
+    margin: 0 auto;
+}
+
+
 .divTitle{
     display:flex;
     position:relative;
     width:80%;
-    height:100vh;
+    height: 100%;
     flex-direction: column;
     font-size:1.8rem;
     color:white;
-    top:350px;
-    margin:0 140px;
+    top:290px;
+    left: 2em;
+}
+.divTitle h1{
+    width: 90%;
+    height: 40%;
+}
+.divTitle form{
+    width: 800px;
+    height: 10%;
 }
 
 button{
@@ -82,23 +100,23 @@ button{
     position:absolute;
     background-image: url(./assets/laranja\ azul\ recorte.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
     width:100%;
-    height:113vh; 
+    height:200%; 
     display:flex;
     position:absolute;
     top:122px;
 }
 
-main{
-    width:100%;
-}
-
 .sectionGrid{
-    width:150vh;
+    width:80%;
+    position: absolute;
+    top: 43em;
     display:flex;
+    justify-content: center;
     flex-wrap: wrap;
-    margin:0 auto;
+    margin-left:140px;
 }
 
 .imageGrid{
@@ -120,6 +138,8 @@ footer{
     display:flex;
     justify-content: center;
     align-items:center;
+    position: relative;
+    top: 80em;
     width:100%;
     height:126px;
 }
@@ -153,43 +173,6 @@ footer{
 }
 
 
-@media(max-width:700px){ 
-    
-    header{
-        display:flex;
-        justify-content: center;
-    }
-    
-    .containerSandwichMenu{
-        display: flex;
-        justify-content: flex-start;
-        width:10vw;
-        height:12vh;
-    }
+@media (max-width:700px){
 
-    ul{
-        display:none;
-    }
-    .laranja{
-        background-size: contain;
-    }
-
-    .sectionGrid{
-        width:60%;
-        display:flex;
-        flex-direction:column;
-    }
-    footer{
-        width:100%;
-        display:flex;
-        flex-direction: column;
-    }
-    .social{
-        background-color:#7FDBD4;
-    }
-    .anchorButton{
-        background-color:#333333;
-        color:#CCCCCC;
-        font-size:12px;
-    }
 }
